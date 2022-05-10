@@ -9,22 +9,16 @@
 ## overview
 
 - very basic deployment
-- example will deploy a sample nodejs hello world application ( https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/30d625750f542a03e9c2 39ac851560ac0def3080/1-hello-world ) 
-- will have default auto-scaling between min:1 and max:5 nodes
+- example will deploy a sample nodejs hello world application ( https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/30d625750f542a03e9c239ac851560ac0def3080/1-hello-world ) 
+- will have default auto-scaling of:
+  - min:1 max:5 nodes
+  - metric: RequestCount, 50 lower, 500 upper breach limits
 
 - can be tested using ab - Apache HTTP server benchmarking tool
-  - adjust the capacity config (cli/console), ie metric NetworkOut upper threshold 10000, lower threshold 2000
   - ab -c 50 -n 50000 $URL
-
 (exact configs might differ based on application used, just giving a very basic example)
 
-this would confirm machines are scaling up/down.
-
-
-### improvements
-
-- add section for the autoscaler to explicitly define min/max scaleup/down criteria
-
+this should confirm machines are scaling up/down.
 
 ## prerequisites
 

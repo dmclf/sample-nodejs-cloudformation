@@ -125,6 +125,57 @@
                             "Ref": "KeyName"
                         }
                     },
+      {
+        "Namespace": "aws:autoscaling:launchconfiguration",
+        "OptionName": "SecurityGroups",
+        "Value": { "Ref": "EC2SG3237Y" }
+      },
+
+                    {
+                        "Namespace": "aws:autoscaling:asg",
+                        "OptionName": "MinSize",
+                        "Value": "1"
+                    },
+                    {
+                        "Namespace": "aws:autoscaling:asg",
+                        "OptionName": "MaxSize",
+                        "Value": "5"
+                    },
+                    {
+                        "Namespace": "aws:autoscaling:trigger",
+                        "OptionName": "LowerThreshold",
+                        "Value": "50"
+                    },
+                    {
+                        "Namespace": "aws:autoscaling:trigger",
+                        "OptionName": "UpperThreshold",
+                        "Value": "500"
+                    },
+                    {
+                        "Namespace": "aws:autoscaling:trigger",
+                        "OptionName": "MeasureName",
+                        "Value": "RequestCount"
+                    },
+                    {
+                        "Namespace": "aws:autoscaling:asg",
+                        "OptionName": "Cooldown",
+                        "Value": "60"
+                    },
+                    {
+                        "Namespace": "aws:autoscaling:trigger",
+                        "OptionName": "UpperBreachScaleIncrement",
+                        "Value": "2"
+                    },
+                    {
+                        "Namespace": "aws:autoscaling:trigger",
+                        "OptionName": "LowerBreachScaleIncrement",
+                        "Value": "-1"
+                    },
+                    {
+                        "Namespace": "aws:autoscaling:trigger",
+                        "OptionName": "BreachDuration",
+                        "Value": "2"
+                    },
                     {
                         "Namespace": "aws:autoscaling:launchconfiguration",
                         "OptionName": "IamInstanceProfile",

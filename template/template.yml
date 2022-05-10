@@ -147,7 +147,7 @@
                     {
                         "Namespace": "aws:autoscaling:trigger",
                         "OptionName": "MeasureName",
-                        "Value": "RequestCount"
+                        "Value": "NetworkOut"
                     },
                     {
                         "Namespace": "aws:autoscaling:asg",

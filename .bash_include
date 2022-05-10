@@ -63,3 +63,12 @@ function select_option {
 
     return $selected
 }
+
+RED=$(printf '\e[31m')
+GREEN=$(printf '\e[32m')
+YELLOW=$(printf '\e[33m')
+BLUE=$(printf '\e[34m')
+MAGENTA=$(printf '\e[35m')
+CYAN=$(printf '\e[36m')
+WHITE=$(printf '\e[37m')
+ENDCOLOR=$(printf '\e[0m \n')

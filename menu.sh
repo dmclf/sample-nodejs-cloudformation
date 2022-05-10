@@ -23,10 +23,14 @@ select_option "${options[@]}"
 choice=$?
 opt=${options[$choice]}
 
-echo "$(date) executing choice:$choice , $opt"
-$opt
-
+echo "${YELLOW}$(date) ${GREEN}executing choice:$choice , ${RED}$opt${ENDCOLOR}"
+if test $choice -eq 2 ; then
+echo -e "${GREEN}CNAME to your cloudformation environment ${RED}http://$(aws elasticbeanstalk describe-environments --query 'Environments[*].CNAME' --output text)${ENDCOLOR}"
+else
+$opt 
+fi
 sleep .1
-echo " 
+echo "
+${YELLOW}$(date) ${GREEN}done${ENDCOLOR}
 "
 done

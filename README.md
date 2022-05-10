@@ -24,10 +24,8 @@ this should confirm machines are scaling up/down.
 
 - s3-bucket `nodejs-elastic-beanstalk` to be present in the specified region (can be modified on the template/template.yml)
   - upload sources/google-nodejs.zip to that s3-bucket /
-- create a KMS key in the specific region
 - export AWS_PROFILE AWS_REGION to your liking
 - export STACK_NAME=your_preferred_stack_name
-- export KMS_KEY_NAME=your_created_kms_key
 - export S3_BUCKET_CF_ARTIFACT=bucket_you_want_to_use_for_cloudformation_artifact_uploading (can just be same as nodejs-elastic-beanstalk)
 
 

@@ -118,13 +118,6 @@
                 "Description": "SSH access to Node.JS Application",
                 "SolutionStackName": "64bit Amazon Linux 2 v5.5.2 running Node.js 16",
                 "OptionSettings": [
-                    {
-                        "Namespace": "aws:autoscaling:launchconfiguration",
-                        "OptionName": "EC2KeyName",
-                        "Value": {
-                            "Ref": "KeyName"
-                        }
-                    },
       {
         "Namespace": "aws:autoscaling:launchconfiguration",
         "OptionName": "SecurityGroups",
